@@ -1,0 +1,6 @@
+package: github.com/crud
+import:
+- package: github.com/labstack/echo
+  version: ~3.1
+- package: github.com/dgrijalva/jwt-go
+  version: ^3.2.0
