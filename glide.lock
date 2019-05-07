@@ -1,8 +1,28 @@
-hash: 28c24de3916e2dc2f59d3d33b7dfe3ad21d8d101d2367104aea303563c132c73
-updated: 2019-05-07T16:12:26.342318484+08:00
+hash: 6956e71fb5f5cdf30e0c7955601ef073e6603f12fd3c96fb479d4e31a4f74881
+updated: 2019-05-07T20:55:44.351230661+08:00
 imports:
 - name: github.com/dgrijalva/jwt-go
   version: 06ea1031745cb8b3dab3f6a236daf2b0aa468b7e
+- name: github.com/gin-contrib/sse
+  version: 5545eab6dad3bbbd6c5ae9186383c2a9d23c0dae
+- name: github.com/gin-gonic/gin
+  version: b869fe1415e4b9eb52f247441830d502aece2d4d
+  subpackages:
+  - binding
+  - json
+  - render
+- name: github.com/go-sql-driver/mysql
+  version: 72cd26f257d44c1114970e19afddcd812016007e
+- name: github.com/golang/protobuf
+  version: e91709a02e0e8ff8b86b7aa913fdc9ae9498e825
+  subpackages:
+  - proto
+- name: github.com/jinzhu/gorm
+  version: 5c0f6716ad1e3a6b6a8afa56afeff747032a6926
+- name: github.com/jinzhu/inflection
+  version: 04140366298a54a039076d798123ffa108fff46c
+- name: github.com/json-iterator/go
+  version: 0ff49de124c6f76f8494e194af75bde0f1a49a29
 - name: github.com/labstack/echo
   version: 4256489c0e1ff50bdb71aedd1a21483fe2d67607
   subpackages:
@@ -18,6 +38,14 @@ imports:
   version: 3a70a971f94a22f2fa562ffcc7a0eb45f5daf045
 - name: github.com/mattn/go-isatty
   version: c1975dc15c1d481e8da23f6ed313bb071136b98f
+- name: github.com/modern-go/concurrent
+  version: bacd9c7ef1dd9b15be4a9909b8ac7a4e313eec94
+- name: github.com/modern-go/reflect2
+  version: 94122c33edd36123c84d5368cfb2b69df93a0ec8
+- name: github.com/ugorji/go
+  version: 3797a84a37c38f1fd76db9d861cee017ae3e1903
+  subpackages:
+  - codec
 - name: github.com/valyala/bytebufferpool
   version: cdfbe9377474227bb42120c1e22fd4433e7f69bf
 - name: github.com/valyala/fasttemplate
@@ -42,4 +70,12 @@ imports:
   - transform
   - unicode/bidi
   - unicode/norm
+- name: google.golang.org/appengine
+  version: 54a98f90d1c46b7731eb8fb305d2a321c30ef610
+  subpackages:
+  - cloudsql
+- name: gopkg.in/go-playground/validator.v8
+  version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
+- name: gopkg.in/yaml.v2
+  version: 51d6538a90f86fe93ac480b35f37b2be17fef232
 testImports: []
