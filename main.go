@@ -4,10 +4,11 @@ package main
 // both are included here for reference
 import (
 	"fmt"
-
+	"net/http"
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
+	"github.com/labstack/echo"
 )
 
 var db *gorm.DB
@@ -33,15 +34,19 @@ func main() {
 	defer db.Close()
 
 	db.AutoMigrate(&Person{})
+	e := echo.New()
+	// r := gin.Default()
+	e.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "Hello, World!")
+	})
+	e.Logger.Fatal(e.Start(":1323"))
+	// r.GET("/people/", GetPeople)
+	// r.GET("/people/:id", GetPerson)
+	// r.POST("/people", CreatePerson)
+	// r.PUT("/people/:id", UpdatePerson)
+	// r.DELETE("/people/:id", DeletePerson)
 
-	r := gin.Default()
-	r.GET("/people/", GetPeople)
-	r.GET("/people/:id", GetPerson)
-	r.POST("/people", CreatePerson)
-	r.PUT("/people/:id", UpdatePerson)
-	r.DELETE("/people/:id", DeletePerson)
-
-	r.Run(":8080")
+	// r.Run(":8080")
 }
 
 func DeletePerson(c *gin.Context) {
